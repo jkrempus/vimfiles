@@ -47,3 +47,12 @@ set bufhidden=hide
 set undodir=~/.vim/undodir
 set undofile
 
+set backspace=2 " make backspace work like most other apps
+
+set laststatus=2
+set statusline=%f         " Path to the file
+set statusline+=%=        " Switch to the right side
+set statusline+=%6.6l     " Current line
+set statusline+=\ /\      " Separator
+set statusline+=%-6.6L    " Total lines
+set statusline+=%6.6c\    " Total lines
