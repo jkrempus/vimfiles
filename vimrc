@@ -17,6 +17,7 @@ Plugin 'FuzzyFinder'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/a.vim'
+Plugin 'osyo-manga/vim-anzu'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,3 +57,7 @@ set statusline+=%6.6l     " Current line
 set statusline+=\ /\      " Separator
 set statusline+=%-6.6L    " Total lines
 set statusline+=%6.6c\    " Total lines
+set hidden
+
+nmap n <Plug>(anzu-n-with-echo)
+nmap N <Plug>(anzu-N-with-echo)
