@@ -1,10 +1,13 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set shell=$COMSPEC
+if has("win32")
+  set shell=$COMSPEC
+  set rtp+=~/vimfiles/bundle/Vundle.vim
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin('~/vimfiles/bundle')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
