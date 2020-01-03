@@ -21,6 +21,8 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/a.vim'
 Plugin 'osyo-manga/vim-anzu'
+Plugin 'lervag/vimtex'
+" End of plugins from branch simple
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,3 +73,9 @@ set belloff=all
 
 nn <silent> <A-j> :cn<cr>
 nn <silent> <A-k> :cp<cr>
+
+" End of settings from branch simple
+
+if has("win32")
+  let g:vimtex_view_general_viewer = 'C:\SumatraPDF\SumatraPDF'
+endif
