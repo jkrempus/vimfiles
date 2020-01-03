@@ -37,6 +37,8 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 set guifont=Anonymous_Pro:h11
 
+set wildmode=longest:full,full
+
 colorscheme jellybeans
 
 " nnoremap <C-f> :FufFile **/<cr>
