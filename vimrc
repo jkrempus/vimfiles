@@ -23,6 +23,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'osyo-manga/vim-anzu'
 Plugin 'lervag/vimtex'
 " End of plugins from branch simple
+Plugin 'mbbill/undotree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
