@@ -68,3 +68,6 @@ nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
 
 set belloff=all
+
+nn <silent> <A-j> :cn<cr>
+nn <silent> <A-k> :cp<cr>
