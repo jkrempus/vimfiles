@@ -24,6 +24,8 @@ Plugin 'osyo-manga/vim-anzu'
 Plugin 'lervag/vimtex'
 " End of plugins from branch simple
 Plugin 'mbbill/undotree'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,3 +82,20 @@ nn <silent> <A-k> :cp<cr>
 if has("win32")
   let g:vimtex_view_general_viewer = 'C:\SumatraPDF\SumatraPDF'
 endif
+
+if executable('clangd')
+    augroup lsp_clangd
+        autocmd!
+        autocmd User lsp_setup call lsp#register_server({
+                    \ 'name': 'clangd',
+                    \ 'cmd': {server_info->['clangd']},
+                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    \ })
+    augroup end
+endif
+
+let g:lsp_signature_help_enabled = 0
+nn <silent> <A-d> :LspDefinition<cr>
+nn <silent> <A-r> :LspReferences<cr>
+nn <silent> <A-s> :LspWorkspaceSymbol<cr>
+
