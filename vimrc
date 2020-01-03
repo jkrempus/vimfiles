@@ -26,6 +26,9 @@ Plugin 'lervag/vimtex'
 Plugin 'mbbill/undotree'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/vim-lsp'
+if has("win32")
+  Plugin 'heaths/vim-msbuild'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
