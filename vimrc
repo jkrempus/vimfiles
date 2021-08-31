@@ -5,9 +5,10 @@ if has("win32")
   set shell=$COMSPEC
 endif
 
-exe 'set rtp+=' . expand('%:p:h') . '/bundle/Vundle.vim'
+let bundle_dir = fnamemodify($MYVIMRC, ':p:h') . '/bundle'
+exe 'set rtp+=' . bundle_dir . '/Vundle.vim'
 
-call vundle#begin('~/vimfiles/bundle')
+call vundle#begin(bundle_dir)
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
