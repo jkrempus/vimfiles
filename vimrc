@@ -3,10 +3,9 @@ filetype off                  " required
 
 if has("win32")
   set shell=$COMSPEC
-  set rtp+=~/vimfiles/bundle/Vundle.vim
-else
-  set rtp+=~/.vim/bundle/Vundle.vim
 endif
+
+exe 'set rtp+=' . expand('%:p:h') . '/bundle/Vundle.vim'
 
 call vundle#begin('~/vimfiles/bundle')
 " alternatively, pass a path where Vundle should install plugins
